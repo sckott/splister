@@ -19,7 +19,7 @@ Match spp list to reference list
 }
 \examples{
 x <- ""
-y <- ""
+y <- system.file("examples", "worms_salmo.csv", package = "splister")
 matcher(x, y)
 }
 

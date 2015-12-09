@@ -4,7 +4,7 @@
 #' @param ref Reference taxon data.frame
 #' @examples
 #' x <- ""
-#' y <- ""
+#' y <- system.file("examples", "worms_salmo.csv", package = "splister")
 #' matcher(x, y)
 matcher <- function(spplist, ref) {
   UseMethod("matcher")

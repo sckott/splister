@@ -10,7 +10,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-[![Build Status](https://api.travis-ci.org/ropensci/splister.png?branch=master)](https://travis-ci.org/ropensci/splister)
+[![Build Status](https://api.travis-ci.org/sckott/splister.png?branch=master)](https://travis-ci.org/sckott/splister)
 
 `splister` xxx
 
