@@ -12,6 +12,6 @@ matcher <- function(spplist, ref) {
 
 #' @export
 #' @rdname matcher
-matcher.data.frame <- function(x) {
+matcher.data.frame <- function(spplist, ref) {
 
 }

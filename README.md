@@ -1,14 +1,7 @@
 splister
 ========
 
-```{r echo=FALSE}
-knitr::opts_chunk$set(
-  warning = FALSE,
-  message = FALSE,
-  collapse = TRUE,
-  comment = "#>"
-)
-```
+
 
 [![Build Status](https://api.travis-ci.org/ropensci/splister.png?branch=master)](https://travis-ci.org/ropensci/splister)
 
@@ -16,11 +9,13 @@ knitr::opts_chunk$set(
 
 ## Installation
 
-```{r install_dev, eval=FALSE}
+
+```r
 devtools::install_github("sckott/splister")
 ```
 
-```{r load}
+
+```r
 library('splister')
 ```
 
