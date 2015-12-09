@@ -2,24 +2,37 @@
 % Please edit documentation in R/matcher.R
 \name{matcher}
 \alias{matcher}
-\alias{matcher.data.frame}
+\alias{matcher.character}
 \title{Match spp list to reference list}
 \usage{
-matcher(spplist, ref)
+matcher(spplist, ref, against = NULL)
 
-\method{matcher}{data.frame}(spplist, ref)
+\method{matcher}{character}(spplist, ref, against = NULL)
 }
 \arguments{
-\item{spplist}{Input species list, a vector}
+\item{spplist}{Input species list, a character vector}
 
-\item{ref}{Reference taxon data.frame}
+\item{ref}{Reference taxon data.frame, or file path}
 }
 \description{
 Match spp list to reference list
 }
 \examples{
-x <- ""
+x <- c('Salmo trutta', 'Oncorhynchus clarkii', 'Salmo Linnaeus',
+'Oncorhynchus clarkii', 'Salvelinus fontinalis', 'Salvelinus confluentus')
 y <- system.file("examples", "worms_salmo.csv", package = "splister")
-matcher(x, y)
+dat <- unique(read.csv(y, stringsAsFactors = FALSE))
+matcher(spplist = x, ref = dat, against = "scientificName")
+
+# read from file
+x <- system.file("examples", "iucn_dat.csv", package = "splister")
+x <- read.csv(x, stringsAsFactors = FALSE)[,-1]
+y <- system.file("examples", "worms_sample.csv", package = "splister")
+spp <- x$sciname[1:20000L]
+res <- matcher(spplist = spp, ref = y, against = "scientificName")
+unique(sapply(res, attr, "match"))
+df <- data.frame(original = spp, taxon = unlist(res),
+   match = sapply(res, attr, "match"))
+df[df$match == "replace", ]
 }
 
