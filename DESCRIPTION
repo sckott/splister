@@ -1,0 +1,8 @@
+Package: splister
+Title: Match Species Lists Against Reference List
+Description: Match Species Lists Against Reference List.
+Version: 0.0.1.9000
+License: MIT + file LICENSE
+URL: https://github.com/sckott/splister
+BugReports: https://github.com/sckott/splister/issues
+Authors@R: person("Scott", "Chamberlain", role = c("aut", "cre"), email = "myrmecocystus@gmail.com")
