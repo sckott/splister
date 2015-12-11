@@ -3,6 +3,9 @@
 #' @export
 #' @param x Input species list, a character vector
 #' @param ref Reference taxon data.frame, or file path
+#' @param against (character) What column to match against in data.frame.
+#' Ignored if a vector given
+#' @param ... Further args passed on to \code{\link{grep}}
 #' @examples
 #' x <- c("Salmo eperlanus Linnaeus, 1758", 'Oncorhynchus clarkii', 'Salmo',
 #' 'Oncorhynchus clarkii', 'Salvelinus fontinalis', 'Salvelinus confluentus')
@@ -29,17 +32,19 @@ match_fuzzy <- function(x, ref = NULL, against = NULL, ...) {
   UseMethod("match_fuzzy")
 }
 
-#' match_fuzzy.character <- function(x, ref = NULL, against = NULL) {
-#'   if (!is(ref, "data.frame")) ref <- readr::read_csv(ref)
-#'   structure(unname(lapply(x, function(z) {
-#'     ex <- ref[ref[[against]] %in% z, against]
-#'     if (length(ex) == 0) {
-#'       structure(list(z, NA), match = "no_exact_match")
-#'     } else {
-#'       structure(list(z, ex), match = "exact_match")
-#'     }
-#'   })), class = "splist", ref = what_ref(ref), against = against)
-#' }
+#' @export
+#' @rdname match_fuzzy
+match_fuzzy.character <- function(x, ref = NULL, against = NULL, ...) {
+  if (!is(ref, "data.frame")) ref <- readr::read_csv(ref)
+  structure(unname(lapply(x, function(z) {
+    ex <- ref[ref[[against]] %in% z, against]
+    if (length(ex) == 0) {
+      structure(list(z, NA), match = "no_exact_match")
+    } else {
+      structure(list(z, ex), match = "exact_match")
+    }
+  })), class = "splist", ref = what_ref(ref), against = against)
+}
 
 #' @export
 #' @rdname match_fuzzy

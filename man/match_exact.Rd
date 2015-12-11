@@ -12,7 +12,10 @@ match_exact(x, ref = NULL, against = NULL)
 \arguments{
 \item{x}{Input species list, a character vector}
 
-\item{ref}{Reference taxon data.frame, or file path}
+\item{ref}{(character) Reference taxon data.frame, or file path}
+
+\item{against}{(character) What column to match against in data.frame.
+Ignored if a vector given}
 }
 \description{
 Exact matcher

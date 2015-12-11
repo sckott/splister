@@ -2,10 +2,13 @@
 % Please edit documentation in R/match_fuzzy.R
 \name{match_fuzzy}
 \alias{match_fuzzy}
+\alias{match_fuzzy.character}
 \alias{match_fuzzy.splist}
 \title{Fuzzy matcher}
 \usage{
 match_fuzzy(x, ref = NULL, against = NULL, ...)
+
+\method{match_fuzzy}{character}(x, ref = NULL, against = NULL, ...)
 
 \method{match_fuzzy}{splist}(x, ref = NULL, against = NULL, ...)
 }
@@ -13,21 +16,14 @@ match_fuzzy(x, ref = NULL, against = NULL, ...)
 \item{x}{Input species list, a character vector}
 
 \item{ref}{Reference taxon data.frame, or file path}
+
+\item{against}{(character) What column to match against in data.frame.
+Ignored if a vector given}
+
+\item{...}{Further args passed on to \code{\link{grep}}}
 }
 \description{
 Fuzzy matcher
-
-match_fuzzy.character <- function(x, ref = NULL, against = NULL) {
-  if (!is(ref, "data.frame")) ref <- readr::read_csv(ref)
-  structure(unname(lapply(x, function(z) {
-    ex <- ref[ref[[against]] %in% z, against]
-    if (length(ex) == 0) {
-      structure(list(z, NA), match = "no_exact_match")
-    } else {
-      structure(list(z, ex), match = "exact_match")
-    }
-  })), class = "splist", ref = what_ref(ref), against = against)
-}
 }
 \examples{
 x <- c("Salmo eperlanus Linnaeus, 1758", 'Oncorhynchus clarkii', 'Salmo',

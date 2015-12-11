@@ -13,6 +13,9 @@ matcher(spplist, ref, against = NULL)
 \item{spplist}{Input species list, a character vector}
 
 \item{ref}{Reference taxon data.frame, or file path}
+
+\item{against}{(character) What column to match against in data.frame.
+Ignored if a vector given}
 }
 \description{
 Match spp list to reference list

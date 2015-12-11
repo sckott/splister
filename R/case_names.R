@@ -1,6 +1,8 @@
 #' Change case
 #'
+#' @export
 #' @param x Input species list, a character vector
+#' @param what (character) one of onlyfirst, trim, lower, upper
 #' @return Same as put in, either list, character vector or data.frame
 #' @examples
 #' x <- c("Salmo eperlanus Linnaeus, 1758", 'Oncorhynchus clarkii', 'Salmo',
@@ -25,7 +27,7 @@ case_names <- function(x, what = "onlyfirst") {
 }
 
 #' @export
-#' @rdname pull_names
+#' @rdname case_names
 case_names.character <- function(x, what = "onlyfirst") {
   switch(what,
     onlyfirst = lets_capwords(x, onlyfirst = TRUE),
@@ -36,7 +38,7 @@ case_names.character <- function(x, what = "onlyfirst") {
 }
 
 #' @export
-#' @rdname pull_names
+#' @rdname case_names
 case_names.splist <- function(x, what = "onlyfirst") {
   switch(what,
     onlyfirst = lets_capwords(x, onlyfirst = TRUE)

@@ -3,6 +3,8 @@
 #' @export
 #' @param spplist Input species list, a character vector
 #' @param ref Reference taxon data.frame, or file path
+#' @param against (character) What column to match against in data.frame.
+#' Ignored if a vector given
 #' @examples
 #' x <- c('Salmo trutta', 'Oncorhynchus clarkii', 'Salmo Linnaeus',
 #' 'Oncorhynchus clarkii', 'Salvelinus fontinalis', 'Salvelinus confluentus')

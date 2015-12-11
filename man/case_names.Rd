@@ -2,12 +2,20 @@
 % Please edit documentation in R/case_names.R
 \name{case_names}
 \alias{case_names}
+\alias{case_names.character}
+\alias{case_names.splist}
 \title{Change case}
 \usage{
 case_names(x, what = "onlyfirst")
+
+\method{case_names}{character}(x, what = "onlyfirst")
+
+\method{case_names}{splist}(x, what = "onlyfirst")
 }
 \arguments{
 \item{x}{Input species list, a character vector}
+
+\item{what}{(character) one of onlyfirst, trim, lower, upper}
 }
 \value{
 Same as put in, either list, character vector or data.frame
