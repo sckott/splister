@@ -1,6 +1,7 @@
 #' Match Species Lists Against Reference List
 #'
 #' @importFrom readr read_csv
+#' @importFrom digest digest
 #' @name splister-package
 #' @aliases splister
 #' @docType package

@@ -6,4 +6,8 @@ License: MIT + file LICENSE
 URL: https://github.com/sckott/splister
 BugReports: https://github.com/sckott/splister/issues
 Authors@R: person("Scott", "Chamberlain", role = c("aut", "cre"), email = "myrmecocystus@gmail.com")
+Imports:
+    readr,
+    magrittr,
+    digest
 RoxygenNote: 5.0.1
