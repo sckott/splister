@@ -28,7 +28,7 @@ matcher(spplist = x, ref = dat, against = "scientificName")
 x <- system.file("examples", "iucn_dat.csv", package = "splister")
 x <- read.csv(x, stringsAsFactors = FALSE)[,-1]
 y <- system.file("examples", "worms_sample.csv", package = "splister")
-spp <- x$sciname[1:20000L]
+spp <- x$sciname[1:200L]
 res <- matcher(spplist = spp, ref = y, against = "scientificName")
 unique(sapply(res, attr, "match"))
 df <- data.frame(original = spp, taxon = unlist(res),

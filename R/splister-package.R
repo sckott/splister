@@ -1,5 +1,7 @@
 #' Match Species Lists Against Reference List
 #'
+#' @importFrom magrittr %>%
+#' @importFrom readr read_csv
 #' @name splister-package
 #' @aliases splister
 #' @docType package
