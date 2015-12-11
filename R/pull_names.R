@@ -1,5 +1,6 @@
 #' Pull out names after matching is done
 #'
+#' @export
 #' @param x Input species list, a character vector
 #' @return Characater vector of names, original names for those not matched,
 #' and replacment names for those matched

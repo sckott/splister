@@ -1,5 +1,6 @@
 #' Exact matcher
 #'
+#' @export
 #' @param x Input species list, a character vector
 #' @param ref Reference taxon data.frame, or file path
 #' @examples

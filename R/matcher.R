@@ -1,5 +1,6 @@
 #' Match spp list to reference list
 #'
+#' @export
 #' @param spplist Input species list, a character vector
 #' @param ref Reference taxon data.frame, or file path
 #' @examples
