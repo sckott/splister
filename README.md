@@ -3,7 +3,7 @@ splister
 
 
 
-[![Build Status](https://api.travis-ci.org/sckott/splister.png?branch=master)](https://travis-ci.org/sckott/splister)
+[![Build Status](https://api.travis-ci.org/ropenscilabs/splister.png?branch=master)](https://travis-ci.org/ropenscilabs/splister)
 
 `splister` xxx
 
@@ -11,7 +11,7 @@ splister
 
 
 ```r
-devtools::install_github("sckott/splister")
+devtools::install_github("ropenscilabs/splister")
 ```
 
 
@@ -40,6 +40,6 @@ df[df$match == "replace", ]
 
 ## Meta
 
-* Please [report any issues or bugs](https://github.com/sckott/splister/issues).
+* Please [report any issues or bugs](https://github.com/ropenscilabs/splister/issues).
 * License: MIT
 * Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.

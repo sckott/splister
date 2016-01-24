@@ -3,8 +3,8 @@ Title: Match Species Lists Against Reference List
 Description: Match Species Lists Against Reference List.
 Version: 0.0.2.9000
 License: MIT + file LICENSE
-URL: https://github.com/sckott/splister
-BugReports: https://github.com/sckott/splister/issues
+URL: https://github.com/ropenscilabs/splister
+BugReports: https://github.com/ropenscilabs/splister/issues
 Authors@R: person("Scott", "Chamberlain", role = c("aut", "cre"), email = "myrmecocystus@gmail.com")
 Imports:
     readr,
