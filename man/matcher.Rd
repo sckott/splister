@@ -21,21 +21,13 @@ Ignored if a vector given}
 Match spp list to reference list
 }
 \examples{
+\dontrun{
 x <- c('Salmo trutta', 'Oncorhynchus clarkii', 'Salmo Linnaeus',
 'Oncorhynchus clarkii', 'Salvelinus fontinalis', 'Salvelinus confluentus')
 y <- system.file("examples", "worms_salmo.csv", package = "splister")
 dat <- unique(read.csv(y, stringsAsFactors = FALSE))
 matcher(spplist = x, ref = dat, against = "scientificName")
+}
 
-# read from file
-x <- system.file("examples", "iucn_dat.csv", package = "splister")
-x <- read.csv(x, stringsAsFactors = FALSE)[,-1]
-y <- system.file("examples", "worms_sample.csv", package = "splister")
-spp <- x$sciname[1:200L]
-res <- matcher(spplist = spp, ref = y, against = "scientificName")
-unique(sapply(res, attr, "match"))
-df <- data.frame(original = spp, taxon = unlist(res),
-   match = sapply(res, attr, "match"))
-df[df$match == "replace", ]
 }
 

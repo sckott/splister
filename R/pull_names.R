@@ -4,7 +4,7 @@
 #' @param x Input species list, a character vector
 #' @return Characater vector of names, original names for those not matched,
 #' and replacment names for those matched
-#' @examples
+#' @examples \dontrun{
 #' x <- system.file("examples", "iucn_dat.csv", package = "splister")
 #' x <- read.csv(x, stringsAsFactors = FALSE)[,-1]
 #' y <- system.file("examples", "worms_sample.csv", package = "splister")
@@ -12,6 +12,7 @@
 #' res <- match_exact(spp, ref = y, against = "scientificName")
 #' res2 <- match_fuzzy(res)
 #' pull_names(res2)
+#' }
 pull_names <- function(x) {
   UseMethod("pull_names")
 }

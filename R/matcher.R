@@ -5,13 +5,16 @@
 #' @param ref Reference taxon data.frame, or file path
 #' @param against (character) What column to match against in data.frame.
 #' Ignored if a vector given
-#' @examples
+#'
+#' @examples \dontrun{
 #' x <- c('Salmo trutta', 'Oncorhynchus clarkii', 'Salmo Linnaeus',
 #' 'Oncorhynchus clarkii', 'Salvelinus fontinalis', 'Salvelinus confluentus')
 #' y <- system.file("examples", "worms_salmo.csv", package = "splister")
 #' dat <- unique(read.csv(y, stringsAsFactors = FALSE))
 #' matcher(spplist = x, ref = dat, against = "scientificName")
+#' }
 #'
+#' @examples
 #' # read from file
 #' x <- system.file("examples", "iucn_dat.csv", package = "splister")
 #' x <- read.csv(x, stringsAsFactors = FALSE)[,-1]

@@ -26,6 +26,7 @@ Ignored if a vector given}
 Fuzzy matcher
 }
 \examples{
+\dontrun{
 x <- c("Salmo eperlanus Linnaeus, 1758", 'Oncorhynchus clarkii', 'Salmo',
 'Oncorhynchus clarkii', 'Salvelinus fontinalis', 'Salvelinus confluentus')
 y <- system.file("examples", "worms_salmo.csv", package = "splister")
@@ -47,5 +48,6 @@ y <- system.file("examples", "worms_sample.csv", package = "splister")
 spp <- x$sciname[1:5000L]
 (res <- match_exact(spp, ref = y, against = "scientificName"))
 res2 <- match_fuzzy(res)
+}
 }
 

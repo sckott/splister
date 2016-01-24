@@ -20,6 +20,7 @@ and replacment names for those matched
 Pull out names after matching is done
 }
 \examples{
+\dontrun{
 x <- system.file("examples", "iucn_dat.csv", package = "splister")
 x <- read.csv(x, stringsAsFactors = FALSE)[,-1]
 y <- system.file("examples", "worms_sample.csv", package = "splister")
@@ -27,5 +28,6 @@ spp <- x$sciname[1:1000L]
 res <- match_exact(spp, ref = y, against = "scientificName")
 res2 <- match_fuzzy(res)
 pull_names(res2)
+}
 }
 

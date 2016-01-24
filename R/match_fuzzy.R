@@ -6,7 +6,7 @@
 #' @param against (character) What column to match against in data.frame.
 #' Ignored if a vector given
 #' @param ... Further args passed on to \code{\link{grep}}
-#' @examples
+#' @examples \dontrun{
 #' x <- c("Salmo eperlanus Linnaeus, 1758", 'Oncorhynchus clarkii', 'Salmo',
 #' 'Oncorhynchus clarkii', 'Salvelinus fontinalis', 'Salvelinus confluentus')
 #' y <- system.file("examples", "worms_salmo.csv", package = "splister")
@@ -28,6 +28,7 @@
 #' spp <- x$sciname[1:5000L]
 #' (res <- match_exact(spp, ref = y, against = "scientificName"))
 #' res2 <- match_fuzzy(res)
+#' }
 match_fuzzy <- function(x, ref = NULL, against = NULL, ...) {
   UseMethod("match_fuzzy")
 }
