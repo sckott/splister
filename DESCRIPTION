@@ -1,11 +1,15 @@
 Package: splister
 Title: Match Species Lists Against Reference List
-Description: Match Species Lists Against Reference List.
-Version: 0.0.2.9000
+Description: Match species lists against reference lists. Supports
+    target data in list, character vector or data.frame, and matches 
+    against a data.frame or path on disk to table. Has exact matching,
+    fuzzy matching, case conversion.
+Version: 0.0.3.93
 License: MIT + file LICENSE
-URL: https://github.com/ropenscilabs/splister
-BugReports: https://github.com/ropenscilabs/splister/issues
-Authors@R: person("Scott", "Chamberlain", role = c("aut", "cre"), email = "myrmecocystus@gmail.com")
+URL: https://github.com/sckott/splister
+BugReports: https://github.com/sckott/splister/issues
+Authors@R: person("Scott", "Chamberlain", role = c("aut", "cre"), 
+    email = "myrmecocystus@gmail.com")
 Imports:
     readr,
     magrittr,
